@@ -1,0 +1,236 @@
+body {
+    padding: 0;
+    margin: 0;
+    background:url(../images/bg-juegocartas.jpg) black;
+    background-repeat: repeat-x;
+}
+
+#preloader {
+    width: 100%;
+    background: url(https://cdn.dribbble.com/users/46511/screenshots/1756041/media/d218b1402d5d366589589c61814c9623.gif) white;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    transition: all 1.5s ease;
+    position: absolute;
+    z-index: 99999;
+}
+
+.fadeoutload {
+    opacity: 0;
+    z-index: 0 !important;
+}
+
+#contener_juegocartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contener_juegocartas a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* eliminar una vez que tengamos el video */ 
+#contenedor_video_juegocartas {
+    display: none;
+}
+
+#contenedor_main_juegocartas {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contenedor_main_juegocartas .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+.contenedor_botones_juegocartas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -10px;
+}
+
+
+#contenedor_main_juegocartas .contenedor a {
+    color: #000;
+    background-color:#e1c188;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 42px;
+    margin-left: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+} 
+
+#contenedor_main_juegocartas .contenedor a:hover, .contenedor_cartasdesplegadas_juegocartas a:hover, #escuchar_audio:hover, #volver_almazo_carta:hover {
+    color: white;
+    background-color: #f4c572;
+}
+
+#escuchar_audio, #volver_almazo_carta {
+    color: #000;
+    background-color:#e1c188;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 42px;
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #e1c188;
+    margin-top: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.contenedor_cartas_juegocartas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor_cartaselegidas_juegocartas {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    list-style: none;
+    padding-left: 0px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#contenedor_cartaselegidas_juegocartas li {
+    width: 95px;
+    height: 145px;
+    border-radius: 15px;
+}
+
+#contenedor_cartaselegidas_juegocartas img {
+    max-width: 95px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#contenedor_elegircarta_juegocartas, #contenedor_carta_juegocartas {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000d3;
+    position: absolute;
+    justify-content: center;
+    z-index: 2;
+}
+
+#contenedor_carta_juegocartas {
+    z-index: 3;
+}
+
+#contenedor_elegircarta_juegocartas.show, #contenedor_carta_juegocartas.show {
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor_cartasdesplegadas_juegocartas {
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contenedor_cartasdesplegadas_juegocartas p {
+    color: #e1c188;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+
+.contenedor_cartasdesplegadas_juegocartas a {
+    color: #000;
+    background-color: #e1c188;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 42px;
+    display: block;
+    margin: auto;
+    transition: all 0.4s ease;
+} 
+
+.contenedor_cartabotones_juegocartas {
+    width: 500px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#holder_carta {
+    margin-bottom: 20px;
+    max-width: 320px;
+    border-radius: 20px;
+}
+
+.contenedor_carta_reproductor {
+    width: 100%;
+} 
+
+#txt_elegircarta {
+    position: relative;
+    top: -250px;
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 20px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+/* Medidas Tablet */ 
+
+@media (max-width: 960px) {
+    #contenedor_cartaselegidas_juegocartas {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Medidas Celular */
