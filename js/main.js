@@ -15,7 +15,6 @@ function newGame () {
     var audioHolder = document.getElementById('holder_carta');
     var escuchar_audio = document.getElementById('escuchar_audio');
     var mezclarCartas = document.getElementById('mezclarcartas');
-    // Array de cartas con imagenes y audios
     var numberCartas = cartas.length;
     const numerosCartas = [];
 
@@ -35,6 +34,7 @@ function newGame () {
     // Funciones Elegir una Carta - Step 1 
     // Creo el Mazo
     function creoMazo(){
+      // Array de cartas con imagenes y audios
       cartas = [
         {  
           "id" : "0",  
