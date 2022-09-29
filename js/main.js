@@ -19,7 +19,6 @@ function newGame () {
     var numberCartas = cartas.length;
     const numerosCartas = [];
 
-    
     // Ejecuto las funciones 
     bt_elegir_carta.addEventListener("click", ShowCartas);
     volver_almazo.addEventListener("click", VolverMazo);
@@ -34,82 +33,7 @@ function newGame () {
     });
 
     // Funciones Elegir una Carta - Step 1 
-    // Muestro La cartas desplegadas
-    function ShowCartas(){
-        fondo_elegir_cartas.classList.add('show');
-    }
-    // Escondo La cartas desplegadas
-    function VolverMazo(){
-        fondo_elegir_cartas.classList.remove('show');
-    }
-
-    // Funciones Elegir una Carta - Step 2
-    // Muestro La single Card
-    function CartaSingle(){
-        contenedor_carta_juegocartas.classList.add('show');
-        NumeroAzar();
-        numberCartas = numberCartas - 1; 
-        numerosCartas.push(numberCartas);
-        agregoCartaElegida();
-        muestroCartaElegida();
-        eliminoCartaArray()
-    }
-
-    function NumeroAzar() {
-        cartaNumero = Math.floor(Math.random() * numberCartas);
-    }
-
-    // Render Carta Elegida
-    function muestroCartaElegida() {
-        imageHolder.src = cartas[cartaNumero].imagen;
-        audioHolder.dataset.audio = cartas[cartaNumero].audio;
-    }
-
-    // Agrego La carta al listado de cartas elegidas.
-    function agregoCartaElegida() {
-        document.getElementById("contenedor_cartaselegidas_juegocartas").innerHTML += 
-          '<li><img src=' +cartas[cartaNumero].imagen+' " alt="'+cartas[cartaNumero].imagen+'" data-imagen="'+cartas[cartaNumero].imagen+'" data-audio="'+cartas[cartaNumero].audio+'"  srcset=""></li>';
-        var lis = document.getElementsByTagName("li");
-
-        for (var i = 0 ; i < lis.length; i++) {
-            lis[i].addEventListener('click', function(event) {
-                var imagenNueva = event.target.getAttribute("data-imagen");
-                var audioNuevo = event.target.getAttribute("data-audio");
-                imageHolder.dataset.audio = audioNuevo
-                contenedor_carta_juegocartas.classList.add('show');
-                imageHolder.src = imagenNueva;
-            });
-        }
-    }
-
-    // Elimino Carta del Array 
-    function eliminoCartaArray() {
-      cartas.splice(cartas[cartaNumero].id, 1);
-    }
-    
-    function playAudio(audiosrc){
-        document.getElementById("cotenedor_cartas_juegocartas_audio").innerHTML += 
-        '<div class="contenedor_carta_reproductor"><audio id="reproductor_audio"  controls ><source id="audioSource" src="'+ audiosrc +'" /></audio></div>';
-        var reproductor_audio = document.getElementById('reproductor_audio');
-        reproductor_audio.play();
-    }
- 
-    // Volver al mazo - La single Card
-    function CartaSingleVolverMazo() {
-        fondo_elegir_cartas.classList.remove('show');
-        contenedor_carta_juegocartas.classList.remove('show');
-        reproductor_audio.remove();
-    }
-
-    // Reiniciar el Juego
-    function reinciarJuego() {
-        numerosCartas.length = 0;
-        document.getElementById("contenedor_cartaselegidas_juegocartas").remove();
-        contenedor_cartas_juegocartas[0].innerHTML += 
-        '<ul id="contenedor_cartaselegidas_juegocartas"></ul>';
-        creoMazo();
-    }
-
+    // Creo el Mazo
     function creoMazo(){
       cartas = [
         {  
@@ -430,5 +354,82 @@ function newGame () {
           "audio": "audios/CARTA 57.mp3",
         },
       ]
+    }
+
+    // Muestro La cartas desplegadas
+    function ShowCartas(){
+        fondo_elegir_cartas.classList.add('show');
+    }
+    // Escondo La cartas desplegadas
+    function VolverMazo(){
+        fondo_elegir_cartas.classList.remove('show');
+    }
+
+    // Funciones Elegir una Carta - Step 2
+    // Muestro La single Card
+    function CartaSingle(){
+        contenedor_carta_juegocartas.classList.add('show');
+        NumeroAzar();
+        numberCartas = numberCartas - 1; 
+        numerosCartas.push(numberCartas);
+        agregoCartaElegida();
+        muestroCartaElegida();
+        eliminoCartaArray()
+        console.log(cartas.length);
+    }
+
+    function NumeroAzar() {
+        cartaNumero = Math.floor(Math.random() * numberCartas);
+    }
+
+    // Render Carta Elegida
+    function muestroCartaElegida() {
+        imageHolder.src = cartas[cartaNumero].imagen;
+        audioHolder.dataset.audio = cartas[cartaNumero].audio;
+    }
+
+    // Agrego La carta al listado de cartas elegidas.
+    function agregoCartaElegida() {
+        document.getElementById("contenedor_cartaselegidas_juegocartas").innerHTML += 
+          '<li><img src=' +cartas[cartaNumero].imagen+' " alt="'+cartas[cartaNumero].imagen+'" data-imagen="'+cartas[cartaNumero].imagen+'" data-audio="'+cartas[cartaNumero].audio+'"  srcset=""></li>';
+        var lis = document.getElementsByTagName("li");
+
+        for (var i = 0 ; i < lis.length; i++) {
+            lis[i].addEventListener('click', function(event) {
+                var imagenNueva = event.target.getAttribute("data-imagen");
+                var audioNuevo = event.target.getAttribute("data-audio");
+                imageHolder.dataset.audio = audioNuevo
+                contenedor_carta_juegocartas.classList.add('show');
+                imageHolder.src = imagenNueva;
+            });
+        }
+    }
+
+    // Elimino Carta del Array 
+    function eliminoCartaArray() {
+      cartas.splice(cartas[cartaNumero].id, 1);
+    }
+    
+    function playAudio(audiosrc){
+        document.getElementById("cotenedor_cartas_juegocartas_audio").innerHTML += 
+        '<div class="contenedor_carta_reproductor"><audio id="reproductor_audio"  controls ><source id="audioSource" src="'+ audiosrc +'" /></audio></div>';
+        var reproductor_audio = document.getElementById('reproductor_audio');
+        reproductor_audio.play();
+    }
+ 
+    // Volver al mazo - La single Card
+    function CartaSingleVolverMazo() {
+        fondo_elegir_cartas.classList.remove('show');
+        contenedor_carta_juegocartas.classList.remove('show');
+        reproductor_audio.remove();
+    }
+
+    // Reiniciar el Juego
+    function reinciarJuego() {
+        numerosCartas.length = 0;
+        document.getElementById("contenedor_cartaselegidas_juegocartas").remove();
+        contenedor_cartas_juegocartas[0].innerHTML += 
+        '<ul id="contenedor_cartaselegidas_juegocartas"></ul>';
+        creoMazo();
     }
 };
