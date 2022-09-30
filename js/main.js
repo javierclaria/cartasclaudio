@@ -411,6 +411,7 @@ function newGame () {
     }
     
     function playAudio(audiosrc){
+        escuchar_audio.disabled = true;
         document.getElementById("cotenedor_cartas_juegocartas_audio").innerHTML += 
         '<div class="contenedor_carta_reproductor"><audio id="reproductor_audio"  controls ><source id="audioSource" src="'+ audiosrc +'" /></audio></div>';
         var reproductor_audio = document.getElementById('reproductor_audio');
@@ -421,6 +422,7 @@ function newGame () {
     function CartaSingleVolverMazo() {
         fondo_elegir_cartas.classList.remove('show');
         contenedor_carta_juegocartas.classList.remove('show');
+        escuchar_audio.disabled = false;
         reproductor_audio.remove();
     }
 
