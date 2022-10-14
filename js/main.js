@@ -63,7 +63,7 @@ function newGame () {
         {  
             "id" : "4",  
           "imagen": "images/cartas/carta_05.jpg",
-          "audio": "audios/CARTA 5.m6p3",
+          "audio": "audios/CARTA 5.mp3",
             
           },
           {
@@ -353,6 +353,117 @@ function newGame () {
           "imagen": "images/cartas/carta_57.jpg",
           "audio": "audios/CARTA 57.mp3",
         },
+        {
+          "id" : "57",  
+          "imagen": "images/cartas/carta_58.jpg",
+          "audio": "audios/CARTA 58.mp3",
+        },
+        {
+          "id" : "58",  
+          "imagen": "images/cartas/carta_59.jpg",
+          "audio": "audios/CARTA 59.mp3",
+        },
+        {
+          "id" : "59",  
+          "imagen": "images/cartas/carta_60.jpg",
+          "audio": "audios/CARTA 60.mp3",
+        },
+        {
+          "id" : "60",  
+          "imagen": "images/cartas/carta_61.jpg",
+          "audio": "audios/CARTA 61.mp3",
+        },
+        {
+          "id" : "61",  
+          "imagen": "images/cartas/carta_62.jpg",
+          "audio": "audios/CARTA 62.mp3",
+        },
+        {
+          "id" : "62",  
+          "imagen": "images/cartas/carta_63.jpg",
+          "audio": "audios/CARTA 63.mp3",
+        },
+        {
+          "id" : "63",  
+          "imagen": "images/cartas/carta_64.jpg",
+          "audio": "audios/CARTA 64.mp3",
+        },
+        {
+          "id" : "64",  
+          "imagen": "images/cartas/carta_65.jpg",
+          "audio": "audios/CARTA 65.mp3",
+        },
+        {
+          "id" : "65",  
+          "imagen": "images/cartas/carta_66.jpg",
+          "audio": "audios/CARTA 66.mp3",
+        },
+        {
+          "id" : "66",  
+          "imagen": "images/cartas/carta_67.jpg",
+          "audio": "audios/CARTA 67.mp3",
+        },
+        {
+          "id" : "67",  
+          "imagen": "images/cartas/carta_68.jpg",
+          "audio": "audios/CARTA 68.mp3",
+        },
+        {
+          "id" : "68",  
+          "imagen": "images/cartas/carta_69.jpg",
+          "audio": "audios/CARTA 69.mp3",
+        },
+        {
+          "id" : "69",  
+          "imagen": "images/cartas/carta_70.jpg",
+          "audio": "audios/CARTA 70.mp3",
+        },
+        {
+          "id" : "70",  
+          "imagen": "images/cartas/carta_71.jpg",
+          "audio": "audios/CARTA 71.mp3",
+        },
+        {
+          "id" : "71",  
+          "imagen": "images/cartas/carta_72.jpg",
+          "audio": "audios/CARTA 72.mp3",
+        },
+        {
+          "id" : "72",  
+          "imagen": "images/cartas/carta_73.jpg",
+          "audio": "audios/CARTA 73.mp3",
+        },
+        {
+          "id" : "73",  
+          "imagen": "images/cartas/carta_74.jpg",
+          "audio": "audios/CARTA 74.mp3",
+        },
+        {
+          "id" : "74",  
+          "imagen": "images/cartas/carta_75.jpg",
+          "audio": "audios/CARTA 75.mp3",
+        },
+        {
+          "id" : "75",  
+          "imagen": "images/cartas/carta_76.jpg",
+          "audio": "audios/CARTA 76.mp3",
+        },
+        {
+          "id" : "76",  
+          "imagen": "images/cartas/carta_77.jpg",
+          "audio": "audios/CARTA 77.mp3",
+        },
+        {
+          "id" : "77",  
+          "imagen": "images/cartas/carta_78.jpg",
+          "audio": "audios/CARTA 78.mp3",
+        },
+        {
+          "id" : "78",  
+          "imagen": "images/cartas/carta_79.jpg",
+          "audio": "audios/CARTA 79.mp3",
+        },
+        
       ]
     }
 
