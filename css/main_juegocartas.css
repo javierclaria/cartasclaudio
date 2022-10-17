@@ -7,7 +7,7 @@ body {
 
 #preloader {
     width: 100%;
-    background: url(https://cdn.dribbble.com/users/46511/screenshots/1756041/media/d218b1402d5d366589589c61814c9623.gif) white;
+    background: url(https://cdn.dribbble.com/users/46511/screenshots/1756041/media/d218b1402d5d366589589c61814c9623.gif) rgb(0, 0, 0);
     background-repeat: no-repeat;
     height: 100vh;
     background-position: center;
